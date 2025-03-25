@@ -57,6 +57,11 @@ h1 {
 
 .card {
   padding: 2em;
+
+  /* Cambios realizados para la segunda asignación */
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 .read-the-docs {
@@ -131,5 +136,25 @@ button:focus-visible {
   https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries
   https://stackoverflow.com/questions/15061520/responsive-css-styles-on-mobile-devices-only
   https://developer.mozilla.org/en-US/docs/Web/CSS/grid
+  https://gemini.google.com/
+*/
+
+/* Cambios realizados para la segunda asignación */
+
+.card-img {
+  grid-column: 1;
+}
+
+.card-img img {
+  max-height: 14rem; /* Definimos altura maxima de todas las imagenes por consistencia */
+}
+
+.card-body {
+  grid-column: 2;
+}
+
+/*
+  Funtes:
+  https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit
   https://gemini.google.com/
 */
