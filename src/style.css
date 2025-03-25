@@ -94,3 +94,42 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+/* Cambios realizados para la primera asignación */
+
+/*
+  Por simplificar se asume que:
+    - Los dispositivos con pantallas de las dimensiones especificadas son "modo mobile".
+    - El mismo estilo para todos los dispositivos del rango.
+*/
+@media screen and (min-width: 0px) and (max-width: 1024px) {
+  .hide-on-mobile {
+    display: none; /* No mostrar ni ocupar espacio, efectivamente ocultando el elemento */
+  }
+}
+
+/*
+  Estas clases extienden o reemplazan estilos para minimizar cambios en el proyecto.
+*/
+@media screen and (min-width: 1025px) {
+  /* Aprovechamos que la app usa display: grid y seguimos su intención. */
+
+  .first-div-extension {
+    grid-column: 1; /* Primera columna de app */
+  }
+
+  .second-div-extension {
+    grid-column: 2; /* Segunda columna de app */
+    display: grid; /* Creamos otro contenedor grid */
+    grid-template-columns: 1fr 1fr; /* Dividimos el grid en dos partes iguales usando medidas fraccionales */
+    gap: 20px; /* Por consistencia mantenemos el tamaño del padding del first-div */
+  }
+}
+
+/*
+  Fuentes:
+  https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries
+  https://stackoverflow.com/questions/15061520/responsive-css-styles-on-mobile-devices-only
+  https://developer.mozilla.org/en-US/docs/Web/CSS/grid
+  https://gemini.google.com/
+*/
